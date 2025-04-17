@@ -31,5 +31,38 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.ht
 8. Under Static website hosting, note the Endpoint.
 
 ### **Step 3: Edit Block Public Access settings**
-Choose the name of the bucket that you have configured as a static website.
-Choose Permissions.
+1. Choose the name of the bucket that you have configured as a static website.
+2. Choose Permissions.
+![alt text](image7.PNG)
+3. Under Block public access (bucket settings), choose Edit.
+4. Uncheck the Block all public access
+![alt text](image8.PNG)
+5. Click Save changes.
+
+### **Step 4: Add a bucket policy that makes your bucket content publicly available**
+1. Under Buckets, choose the name of your bucket.
+2. Choose Permissions.
+3. Under Bucket Policy, choose Edit.
+![alt text](image9.PNG)
+4. To grant public read access for your website, copy the following bucket policy, and paste it in the Bucket policy editor.
+![alt text](image10.PNG)
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Bucket-Name/*"
+            ]
+        }
+    ]
+}
+
+5. Update the Resource to your bucket name.
+6. Choose Save changes.
