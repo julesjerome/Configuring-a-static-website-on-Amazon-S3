@@ -12,4 +12,8 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.ht
 ![alt text](image1.PNG)
 3. Enter the name you want to use for your bucket.
 ![alt text](image2.PNG)
-
+4. Choose a Region that is geographically close to you to minimize latency and costs, or to address regulatory requirements. The Region that you choose determines your Amazon S3 website endpoint.
+5. Choose Create.
+![alt text](image3.PNG)
+6. Bucket is created.
+![alt text](image4.PNG)
