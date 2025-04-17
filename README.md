@@ -17,3 +17,19 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.ht
 ![alt text](image3.PNG)
 6. Bucket is created.
 ![alt text](image4.PNG)
+
+### **Step 2: Enable static website hosting**
+1. In the buckets list, choose the name of the bucket that you just created.
+2. Under Static website hosting, choose Edit.
+![alt text](image5.PNG)
+3. Choose Use this bucket to host a website.
+4. Under Static website hosting, choose Enable.
+5. In the Index document, enter the name typically index.html.
+6. In the error document, enter the name 404.html.
+![alt text](image6.PNG)
+7. Choose Save changes.
+8. Under Static website hosting, note the Endpoint.
+
+### **Step 3: Edit Block Public Access settings**
+Choose the name of the bucket that you have configured as a static website.
+Choose Permissions.
